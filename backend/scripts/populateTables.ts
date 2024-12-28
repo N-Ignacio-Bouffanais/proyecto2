@@ -5,7 +5,42 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const API_KEY = process.env.API_KEY;
-const cities = ["Santiago", "Buenos Aires", "Lima", "Bogota", "Caracas"]; // Agrega más ciudades si es necesario
+const cities = [
+  "Santiago",
+  "Buenos Aires",
+  "Lima",
+  "Bogota",
+  "Caracas",
+  "Toronto",
+  "Sydney",
+  "Madrid",
+  "Paris",
+  "Tokyo",
+  "Rome",
+  "Beijing",
+  "Bangkok",
+  "New York",
+  "San Francisco",
+  "Moscow",
+  "Berlin",
+  "Chicago",
+  "Singapore",
+  "Seoul",
+  "Istanbul",
+  "Casablanca",
+  "Manila",
+  "Helsinki",
+  "Karachi",
+  "Kuala Lumpur",
+  "Dubai",
+  "Jakarta",
+  "Kosovo",
+  "Hong Kong",
+  "Luxembourg",
+  "Monaco",
+  "Vienna",
+  "Amsterdam",
+];
 
 const populateDatabase = async () => {
   const db = await mysql.createConnection({
