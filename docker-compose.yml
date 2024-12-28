@@ -1,12 +1,14 @@
-version: '3.8'
 services:
-  backend:
-    build:
-      context: ./backend
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-weather
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: weather_db
     ports:
-      - "3000:3000"
-    env_file:
-      - ./backend/.env
+      - "3306:3306"
     volumes:
-      - ./backend:/app
-    command: npm start
+      - db_data:/var/lib/mysql
+      - ./backend/db:/docker-entrypoint-initdb.d
+volumes:
+  db_data:
