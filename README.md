@@ -35,6 +35,8 @@ DevOps
 ## Estructura del proyecto
 
 ### Frontend
+
+```plaintext
 src/
 ├── api/
 │   ├── auth.ts              # Lógica para autenticación
@@ -52,9 +54,11 @@ src/
 ├── main.tsx                 # Punto de entrada del proyecto
 ├── index.css                # Estilos globales
 └── vite-env.d.ts            # Configuración de TypeScript
+```
 
 ### Backend
 
+```plaintext
 src/
 ├── middleware/
 │   └── authMiddleware.ts    # Middleware para verificar el token JWT
@@ -68,6 +72,7 @@ src/
 ├── app.ts                   # Configuración principal del servidor
 ├── .env                     # Variables de entorno (DB_HOST, DB_USER, JWT_SECRET, etc.)
 └── docker-compose.yml       # Configuración de Docker para MySQL
+```
 
 ## Endpoints
 
